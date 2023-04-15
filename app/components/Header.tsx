@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
+import { easeInOut, motion, useScroll, useTransform } from "framer-motion"
 import {useRef } from "react"
 
 
@@ -14,7 +14,7 @@ import {useRef } from "react"
 const height =useTransform(scrollYProgress, [0,0.7, 1], ["600px","600px", "100px"])
 const position =useTransform(scrollYProgress, [0,1], ["sticky","fixed"])
 const background =useTransform(scrollYProgress, [0,0.9, 1], ["","", "rgba(255,255,255,.1)"])
-const fontSz =useTransform(scrollYProgress, [0,1], ["100px","30px"])
+const fontSz =useTransform(scrollYProgress, [0,0.9, 1], ["500px","500px", "220px"])
 const samuraiColor =useTransform(scrollYProgress, [0,0.6, 1], ["white","white", "red"])
   return (
     <div>
