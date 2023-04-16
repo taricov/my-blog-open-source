@@ -14,7 +14,7 @@ export const PostCard = ({...post}: PostProps) => {
     return (
         <>
   <div className="flex items-center justify-center h-screen">
-      <Link className="rounded-lg relative block w-1/4 bg-gray-900 group overflow-hidden" href="#">
+      <Link className="rounded-lg relative block w-5/12 h-[400px] bg-gray-900 group overflow-hidden" href={`http://localhost:3000/posts/`+ post.title}>
         <Image width={100} height={100} className=" absolute inset-0 object-cover w-full h-full group-hover:opacity-50 duration-300 transition-all"
           src="../../public/next.svg" alt="someting" />
         <div className="relative p-2">

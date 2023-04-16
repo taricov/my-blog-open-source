@@ -1,23 +1,15 @@
+import posts from "@/data/posts.json";
 
+ const Post = ({ params: {title}}: any) => {
 
-export interface PostProps {
-    title : string,
-    createdAt: string, 
-    tags: string[],
-    body: string
-}
-
-export const Post = ({...post}: PostProps) => {
+    const thisPost = posts.data.filter(post => post.title === title)[0]
 
     return (
         <>
-        <div className="flex flex-col items-center justify-center">
-
-        <h1 className="text-3xl">{post.title}</h1>
-        <span>{post.createdAt}</span>
-        <p>{post.tags}</p>
-        <p>{post.body}</p>
-        </div>
+    <div>{thisPost.title}</div>
+    <div>tags: {thisPost.tags.join(", ")}</div>
         </>
     )
 }  
+
+export default Post;
