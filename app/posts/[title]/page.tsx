@@ -6,8 +6,19 @@ import posts from "@/data/posts.json";
 
     return (
         <>
-    <div>{thisPost.title}</div>
-    <div>tags: {thisPost.tags.join(", ")}</div>
+
+
+<div className="post__layout" >
+  <h1>{thisPost.title}</h1>
+  <div className="metadata">
+  <h4>Date: {thisPost.createdAt}</h4>
+  <h4>Keywords: {thisPost.tags.join(", ")}</h4>
+  </div>
+  <p>{thisPost.body} </p>
+</div>
+
+<div className="overlay"></div>
+
         </>
     )
 }  

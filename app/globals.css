@@ -17,6 +17,10 @@
 }
 
 body {
+  /* background:linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.2));  */
+  /* background:linear-gradient(70deg,rgba(0,0,0,0.3),rgba(0,0,0,0.1),rgba(0,0,0,0)), linear-gradient(30deg,#fafafa,#fcfcfc,#ddd); */
+  background-size:100vw 100vh;
+  background-attachment:fixed;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,3 +30,29 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+
+.post__layout{
+padding: 8em 0;
+  font-size:25px;
+  /* margin-left:10rem; */
+  /* margin-bottom:4em; */
+  transform-origin:80% 300px; 
+  max-width:900px;
+  transform: scale(0.75,0.95) perspective(800px) rotateY(1deg) rotateX(10deg); 
+  text-align:justify;
+}
+.post__layout p{
+  text-indent:60px;
+}
+.post__layout h4{
+  text-align:center;
+}
+.post__layout .metadata{
+  margin: 1em auto;
+}
+
+.post__layout h1{
+    font-weight:normal;
+    font-size:100px;
+    text-align:center;
+}
