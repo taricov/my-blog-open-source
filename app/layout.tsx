@@ -1,6 +1,9 @@
 import './globals.css'
 // import {motion } from "framer-motion"
 import { Playfair_Display } from 'next/font/google'
+import { AppProvider } from "../redux/porvider"
+import { DarkThemeProvider } from './components/darkMode/darkModeProvider'
+import { ThemeSwitcher } from './components/darkMode/ThemeSwitcher'
 
 export const metadata = {
   title: 'The Samurai Nation',
@@ -28,13 +31,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" style={{scrollBehavior: "smooth"}}>
+    
+    <html lang="en" style={{scrollBehavior: "smooth", position: "relative"}} suppressHydrationWarning>
       <body className={playFair.className}>
         {/* <motion.div>
         {children}
-        </motion.div> */}
+      </motion.div> */}
+<DarkThemeProvider>
+<ThemeSwitcher />
+
+      {/* <AppProvider> */}
 
         {children}
+        
+</DarkThemeProvider>
+      {/* </AppProvider> */}
         </body>
     </html>
   )
