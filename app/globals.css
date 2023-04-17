@@ -56,3 +56,15 @@ padding: 8em 0;
     font-size:100px;
     text-align:center;
 }
+
+
+.back__btn{
+  position:absolute;
+top:50px;
+left: 100px;
+width: 30px;
+transition: all .5s;
+}
+.back__btn:hover{
+transform: translateX(-10px);
+}
