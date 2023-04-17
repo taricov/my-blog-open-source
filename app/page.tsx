@@ -4,6 +4,7 @@ import { Playfair_Display } from 'next/font/google'
 import { Header } from '@/app/components/Header'
 import { PostCard } from '@/app/components/PostCard'
 import type { PostProps } from '@/app/components/PostCard'
+import Hero from './components/Hero'
 
 async function getPosts(){
   const res = await fetch("http://localhost:3000/api/posts")
@@ -22,10 +23,13 @@ async function getPosts(){
 
 <Header/>
 <div className="pt-[1000px]">
+<Hero />
+<div id="featured__posts" className="pt-[100px]">
 {
   allPosts.data.filter((post:PostProps) => post.featured === true
   ).map((post:PostProps) => <PostCard {...post} key={post.title}/>)
 }
+  </div>
   </div>
     </main>
   )

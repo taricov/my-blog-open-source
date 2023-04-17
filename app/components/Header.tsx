@@ -13,7 +13,7 @@ import {useRef } from "react"
 // console.log(scrollYProgress)
 const height =useTransform(scrollYProgress, [0,0.7, 1], ["600px","600px", "100px"])
 const position =useTransform(scrollYProgress, [0,1], ["sticky","fixed"])
-const background =useTransform(scrollYProgress, [0,0.9, 1], ["","", "rgba(255,255,255,.1)"])
+const background =useTransform(scrollYProgress, [0,0.9, 1], ["","", "rgba(0,200,20,1)"])
 const fontSz =useTransform(scrollYProgress, [0,0.9, 1], ["500px","500px", "220px"])
 const samuraiColor =useTransform(scrollYProgress, [0,0.6, 1], ["white","white", "red"])
   return (
@@ -22,7 +22,7 @@ const samuraiColor =useTransform(scrollYProgress, [0,0.6, 1], ["white","white", 
         <motion.header 
         ref={headerRef}
         style={{height, position, background}}
-      className="w-screen flex items-end justify-center">
+      className="w-screen flex items-end justify-center z-10">
 
 {/* <motion.h1 
 style={{fontSize:fontSz}}
